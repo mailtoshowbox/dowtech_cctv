@@ -64,6 +64,9 @@ class ControllerExtensionModuleFeatured extends Controller {
 				}
 			}
 		}
+		
+
+		$data['ENABLE_CART'] = ENABLE_CART;
 
 		if ($data['products']) {
 			return $this->load->view('extension/module/featured', $data);

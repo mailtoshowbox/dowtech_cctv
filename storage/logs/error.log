@@ -2247,3 +2247,15 @@
 2022-01-20 10:56:14 - PHP Warning:  require(/var/www/open-2/admin/language/en-gb/common/footer.php): failed to open stream: Permission denied in /var/www/open-2/system/library/language.php on line 67
 2022-01-20 11:01:23 - PHP Warning:  require(/var/www/open-2/catalog/language/en-gb/common/footer.php): failed to open stream: Permission denied in /var/www/open-2/system/library/language.php on line 67
 2022-01-20 11:01:28 - PHP Warning:  require(/var/www/open-2/catalog/language/en-gb/common/footer.php): failed to open stream: Permission denied in /var/www/open-2/system/library/language.php on line 67
+2022-01-24 12:35:37 - PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'dowtech_cctv' in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 7
+2022-01-24 12:35:37 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 10
+2022-01-24 12:35:37 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 10
+2022-01-24 12:35:39 - PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'dowtech_cctv' in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 7
+2022-01-24 12:35:39 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 10
+2022-01-24 12:35:39 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 10
+2022-01-24 12:35:40 - PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'dowtech_cctv' in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 7
+2022-01-24 12:35:40 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 10
+2022-01-24 12:35:40 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 10
+2022-01-24 12:35:40 - PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'dowtech_cctv' in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 7
+2022-01-24 12:35:40 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 10
+2022-01-24 12:35:40 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\MAILTOSHOWBOX\xampp\htdocs\dowtech_cctv\system\library\db\mysqli.php on line 10

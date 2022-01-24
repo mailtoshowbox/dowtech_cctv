@@ -327,7 +327,7 @@
 {% endif %}
 <div class="buttons">
   <div class="pull-right">
-    <input type="button" value="{{ button_continue }}" id="button-guest" data-loading-text="{{ text_loading }}" class="btn btn-primary" />
+    <input type="button" value="{{ "SUBMIT ENQUIRY" }}" id="button-guest" data-loading-text="{{ text_loading }}" class="btn btn-primary" />
   </div>
 </div>
 <script type="text/javascript"><!--
@@ -426,7 +426,7 @@ $('#collapse-payment-address button[id^=\'button-payment-custom-field\']').on('c
  
 <script type="text/javascript"><!--
 $('#collapse-payment-address select[name=\'country_id\']').on('change', function() {
-  alert(1);
+
 	$.ajax({
 		url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
 		dataType: 'json',

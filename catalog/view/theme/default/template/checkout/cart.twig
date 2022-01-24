@@ -30,9 +30,12 @@
     {% endif %}
     <div id="content" class="{{ class }}">{{ content_top }}
       <h1>{{ heading_title }}
-        {% if weight %}
-        &nbsp;({{ weight }})
-        {% endif %} </h1>
+        {% if ENABLE_CART %}
+            {% if weight %}
+              &nbsp;({{ weight }})
+            {% endif %} 
+          {% endif %}  </h1>
+        
       <form action="{{ action }}" method="post" enctype="multipart/form-data">
         <div class="table-responsive">
           <table class="table table-bordered">
@@ -189,7 +192,7 @@ $(document).delegate('#button-guest', 'click', function() {
 
 <script type="text/javascript"><!--
 $('#collapse-payment-address select[name=\'country_id\']').on('change', function() {
-  alert(1);
+ 
 	$.ajax({
 		url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
 		dataType: 'json',

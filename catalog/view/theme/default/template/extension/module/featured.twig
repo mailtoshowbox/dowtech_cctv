@@ -32,9 +32,14 @@
         {% endif %}
       </div>
       <div class="button-group">
+        <button type="button" onclick="cart.enquiry('{{ product.product_id }}');"><i class="fa fa-envelope-open-o"></i>  &nbsp;&nbsp; <span class="hidden-xs hidden-sm hidden-md">{{ button_enquiry }}</span></button>
+
+        {% if ENABLE_CART %} 
         <button type="button" onclick="cart.add('{{ product.product_id }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
+   
         <button type="button" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart"></i></button>
         <button type="button" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></button>
+        {% endif %} 
       </div>
     </div>
   </div>

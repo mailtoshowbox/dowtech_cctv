@@ -2,10 +2,22 @@
 class ControllerCheckoutCart extends Controller {
 	public function index() {
 
-	 
-		$this->load->language('checkout/cart');
+		$data['ENABLE_CART'] = ENABLE_CART;
+		
 
-		$this->document->setTitle($this->language->get('heading_title'));
+		
+		$this->load->language('checkout/cart');
+		
+
+		if(ENABLE_CART){
+			$this->document->setTitle($this->language->get('heading_title'));
+		}else{
+			$this->document->setTitle($this->language->get('heading_title_enquiry'));
+		}
+
+		$data['heading_title'] = ENABLE_CART ? $this->language->get('heading_title') : $this->language->get('heading_title_enquiry');
+
+		
 
 		$data['breadcrumbs'] = array();
 
@@ -16,7 +28,7 @@ class ControllerCheckoutCart extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'href' => $this->url->link('checkout/cart'),
-			'text' => $this->language->get('heading_title')
+			'text' =>  ENABLE_CART ? $this->language->get('heading_title') : $this->language->get('heading_title_enquiry')
 		);
 
 		if ($this->cart->hasProducts() || !empty($this->session->data['vouchers'])) {
@@ -247,7 +259,18 @@ class ControllerCheckoutCart extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
-			$this->response->setOutput($this->load->view('checkout/cart', $data));
+
+
+	
+
+			if(ENABLE_CART){
+				$this->response->setOutput($this->load->view('checkout/cart', $data));
+			}else{
+				$this->response->setOutput($this->load->view('checkout/cart', $data));
+			}
+
+
+			
 		} else {
 			$data['text_error'] = $this->language->get('text_empty');
 			
@@ -383,6 +406,14 @@ class ControllerCheckoutCart extends Controller {
 			}
 		}
 
+		$data['ENABLE_CART'] = ENABLE_CART;
+		if(!ENABLE_CART){
+			$json['redirect'] = str_replace('&amp;', '&', $this->url->link('checkout/cart', 'product_id=' . $this->request->post['product_id']));
+
+		}
+
+
+
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
@@ -469,10 +500,7 @@ class ControllerCheckoutCart extends Controller {
 				}
 			}
 		}
- echo "<pre>";
- print_r($this->request->post); 
- print_r($json); 
-		exit;
+ 
 
 		// Update
 		if (!empty($this->request->post['quantity'])) {

@@ -2,6 +2,9 @@
 // Heading
 $_['heading_title']            = 'Shopping Cart';
 
+$_['heading_title_enquiry']            = 'Enquiry Items';
+
+
 // Text
 $_['text_success']             = 'Success: You have added <a href="%s">%s</a> to your <a href="%s">shopping cart</a>!';
 $_['text_remove']              = 'Success: You have modified your shopping cart!';

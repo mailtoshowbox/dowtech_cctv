@@ -57,6 +57,8 @@ class ControllerCommonFooter extends Controller {
 		}
 
 		$data['scripts'] = $this->document->getScripts('footer');
+
+		$data['ENABLE_CART'] = ENABLE_CART;
 		
 		return $this->load->view('common/footer', $data);
 	}
