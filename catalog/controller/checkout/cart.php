@@ -273,6 +273,12 @@ class ControllerCheckoutCart extends Controller {
 			
 		} else {
 			$data['text_error'] = $this->language->get('text_empty');
+			if(!ENABLE_CART){
+				$data['text_error'] = $this->language->get('text_empty_enquiry');
+			}
+
+			
+			
 			
 			$data['continue'] = $this->url->link('common/home');
 
